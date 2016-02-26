@@ -1,18 +1,16 @@
 /*
-    最后更新时间：2016-02-26
-    作者：狼族小狈
-    联系QQ：1340641314
-*/
-
-
-/*
     定义伸缩盒子布局
 */
 
 .flex {
+    overflow: hidden;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
+}
+
+.flex>* {
+    overflow: hidden;
 }
 
 
@@ -25,7 +23,8 @@
     从左到右开始显示
 */
 
-.flex-left {
+.flex,
+.flex.flex-left {
     -webkit-box-direction: normal;
     -webkit-box-orient: horizontal;
     -webkit-flex-direction: row;
@@ -37,7 +36,7 @@
     从右到左开始显示
 */
 
-.flex-right {
+.flex.flex-right {
     -webkit-box-pack: end;
     -webkit-box-direction: reverse;
     -webkit-box-orient: horizontal;
@@ -50,7 +49,7 @@
     从上到下显示
 */
 
-.flex-top {
+.flex.flex-top {
     -webkit-box-direction: normal;
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
@@ -62,7 +61,7 @@
     从下到上开始显示
 */
 
-.flex-bottom {
+.flex.flex-bottom {
     -webkit-box-pack: end;
     -webkit-box-direction: reverse;
     -webkit-box-orient: vertical;
@@ -80,7 +79,8 @@
     主轴左右对齐
 */
 
-.flex-main-justify {
+.flex,
+.flex.flex-main-justify {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     justify-content: space-between;
@@ -91,7 +91,7 @@
     主轴左对齐
 */
 
-.flex-main-left {
+.flex.flex-main-left {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
@@ -102,7 +102,7 @@
     主轴右对齐
 */
 
-.flex-main-right {
+.flex.flex-main-right {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     justify-content: flex-end;
@@ -113,7 +113,7 @@
     主轴居中对齐
 */
 
-.flex-main-center {
+.flex.flex-main-center {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
@@ -129,7 +129,8 @@
     交叉轴上对齐
 */
 
-.flex-cross-top {
+.flex,
+.flex.flex-cross-top {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     align-items: flex-start;
@@ -140,7 +141,7 @@
     交叉轴下对齐
 */
 
-.flex-cross-bottom {
+.flex.flex-cross-bottom {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
     align-items: flex-end;
@@ -151,7 +152,7 @@
     交叉轴居中对齐
 */
 
-.flex-cross-center {
+.flex.flex-cross-center {
     -webkit-box-align: center;
     -webkit-align-items: center;
     align-items: center;
@@ -162,7 +163,7 @@
     交叉轴跟随内容的高度
 */
 
-.flex-cross-baseline {
+.flex.flex-cross-baseline {
     -webkit-box-align: baseline;
     -webkit-align-items: baseline;
     align-items: baseline;
@@ -173,7 +174,7 @@
     交叉轴上下铺满
 */
 
-.flex-cross-stretch {
+.flex.flex-cross-stretch {
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
     align-items: stretch;
@@ -189,7 +190,7 @@
     允许本元素伸缩
 */
 
-.flex-box-1 {
+.flex>.flex-box-1 {
     -webkit-box-flex: 1.0;
     -webkit-flex-grow: 1;
     flex-grow: 1;
@@ -202,7 +203,8 @@
     禁止元素伸缩
 */
 
-.flex-box-0 {
+.flex>*,
+.flex>.flex-box-0 {
     -webkit-box-flex: 0.0;
     -webkit-flex-grow: 0;
     flex-grow: 0;
