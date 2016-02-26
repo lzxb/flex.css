@@ -173,10 +173,10 @@
     交叉轴上下铺满
 */
 
-.flex-cross-strecth {
-    -webkit-box-align: strecth;
-    -webkit-align-items: strecth;
-    align-items: strecth;
+.flex-cross-stretch {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
 }
 
 
