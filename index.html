@@ -21,8 +21,12 @@
             color: #555;
         }
         
+        body {
+            line-height: 38px;
+        }
+        
         .main {
-            width: 980px;
+            max-width: 980px;
             margin: 0 auto;
             border: 1px solid #ddd;
         }
@@ -33,6 +37,7 @@
         
         .info {
             padding: 10px;
+            line-height: 28px;
             border-radius: 5px;
             border: 1px solid #ddd;
             color: #333;
@@ -87,6 +92,7 @@
         
         .header-about {
             padding: 10px;
+            line-height: 24px;
             text-align: center;
             font-size: 13px;
             color: #888;
@@ -206,26 +212,33 @@
             </div>
         </div>
         <div class="box">
-            <h4>水平居中</h4>
+            <h4>子元素水平居中</h4>
             <div class="info">
 
             </div>
             <div class="code">
                 <!-- start -->
                 <style type="text/css">
-                    .test-1 {
+                    .test-0 {
                         height: 200px;
-                        background: red;
+                        background: #222;
                     }
                     
-                    .test-1>div {
+                    .test-0 div:nth-child(1) {
                         width: 100px;
                         height: 100px;
+                    }
+                    
+                    .test-0 div:nth-child(odd) {
                         background: blue;
                     }
+                    
+                    .test-0 div:nth-child(even) {
+                        background: red;
+                    }
                 </style>
-                <div class="flex flex-main-center flex-cross-center test-1">
-                    <div>水平居中</div>
+                <div class="flex flex-main-center flex-cross-center test-0">
+                    <div>我是第一个元素</div>
                 </div>
                 <!-- end -->
             </div>
@@ -240,19 +253,26 @@
             <div class="code">
                 <!-- start -->
                 <style type="text/css">
+                    .test-1 {
+                        height: 200px;
+                        background: #222;
+                    }
                     
-                    .test-2 .flex-box-0 {
+                    .test-1 div:nth-child(1) {
                         width: 200px;
+                    }
+                    
+                    .test-1 div:nth-child(odd) {
                         background: blue;
                     }
                     
-                    .test-2 .flex-box-1 {
+                    .test-1 div:nth-child(even) {
                         background: red;
                     }
                 </style>
-                <div class="flex test-2">
-                    <div class="flex-box-0">左边固定宽度</div>
-                    <div class="flex-box-1">右边把剩余宽度铺满</div>
+                <div class="flex test-1">
+                    <div class="flex-box-0">我是第一个元素</div>
+                    <div class="flex-box-1">我是第二个元素</div>
                 </div>
                 <!-- end -->
 
@@ -266,19 +286,26 @@
             <div class="code">
                 <!-- start -->
                 <style type="text/css">
+                    .test-2 {
+                        height: 200px;
+                        background: #222;
+                    }
                     
-                    .test-2 .flex-box-0 {
+                    .test-2 div:nth-child(2) {
                         width: 200px;
+                    }
+                    
+                    .test-2 div:nth-child(odd) {
                         background: blue;
                     }
                     
-                    .test-2 .flex-box-1 {
+                    .test-2 div:nth-child(even) {
                         background: red;
                     }
                 </style>
                 <div class="flex test-2">
-                    <div class="flex-box-1">左边把剩余宽度铺满</div>
-                    <div class="flex-box-0">右边固定宽度</div>
+                    <div class="flex-box-1">我是第一个元素</div>
+                    <div class="flex-box-0">我是第二个元素</div>
                 </div>
                 <!-- end -->
 
@@ -292,22 +319,256 @@
             <div class="code">
                 <!-- start -->
                 <style type="text/css">
+                    .test-3 {
+                        height: 200px;
+                        background: #222;
+                    }
                     
-                    .test-3 .flex-box-1 {
+                    .test-3>div {
                         width: 0;
-                        background: red;
                     }
                     
                     .test-3 div:nth-child(odd) {
                         background: blue;
                     }
+                    
+                    .test-3 div:nth-child(even) {
+                        background: red;
+                    }
                 </style>
                 <div class="flex test-3">
-                    <div class="flex-box-1">子元素平分宽度</div>
-                    <div class="flex-box-1">子元素平分宽度</div>
-                    <div class="flex-box-1">子元素平分宽度</div>
-                    <div class="flex-box-1">子元素平分宽度</div>
-                    <div class="flex-box-1">子元素平分宽度</div>
+                    <div class="flex-box-1">我是第一个元素1</div>
+                    <div class="flex-box-1">我是第二个元素22</div>
+                    <div class="flex-box-1">我是第三个元素333</div>
+                    <div class="flex-box-1">我是第四个元素4444</div>
+                    <div class="flex-box-1">我是第五个元素55555</div>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+        <div class="box">
+            <h4>子元素顶部两端对齐</h4>
+            <div class="info">
+
+            </div>
+            <div class="code">
+                <!-- start -->
+                <style type="text/css">
+                    .test-4 {
+                        height: 200px;
+                        background: #222;
+                    }
+                    
+                    .test-4 div:nth-child(odd) {
+                        background: blue;
+                    }
+                    
+                    .test-4 div:nth-child(even) {
+                        background: red;
+                    }
+                </style>
+                <div class="flex flex-main-justify test-4">
+                    <div>我是第一个元素</div>
+                    <div>我是第二个元素</div>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+        <div class="box">
+            <h4>子元素底部两端对齐</h4>
+            <div class="info">
+
+            </div>
+            <div class="code">
+                <!-- start -->
+                <style type="text/css">
+                    .test-5 {
+                        height: 200px;
+                        background: #222;
+                    }
+                    
+                    .test-5 div:nth-child(odd) {
+                        background: blue;
+                    }
+                    
+                    .test-5 div:nth-child(even) {
+                        background: red;
+                    }
+                </style>
+                <div class="flex flex-main-justify flex-cross-bottom test-5">
+                    <div>我是第一个元素</div>
+                    <div>我是第二个元素</div>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+        <div class="box">
+            <h4>子元素左边上下两端对齐</h4>
+            <div class="info">
+
+            </div>
+            <div class="code">
+                <!-- start -->
+                <style type="text/css">
+                    .test-6 {
+                        height: 200px;
+                        background: #222;
+                    }
+                    
+                    .test-6 div:nth-child(odd) {
+                        background: blue;
+                    }
+                    
+                    .test-6 div:nth-child(even) {
+                        background: red;
+                    }
+                </style>
+                <div class="flex flex-top flex-main-justify flex-cross-top test-6">
+                    <div>我是第一个元素</div>
+                    <div>我是第二个元素</div>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+        <div class="box">
+            <h4>子元素右边上下两端对齐</h4>
+            <div class="info">
+
+            </div>
+            <div class="code">
+                <!-- start -->
+                <style type="text/css">
+                    .test-7 {
+                        height: 200px;
+                        background: #222;
+                    }
+                    
+                    .test-7 div:nth-child(odd) {
+                        background: blue;
+                    }
+                    
+                    .test-7 div:nth-child(even) {
+                        background: red;
+                    }
+                </style>
+                <div class="flex flex-top flex-main-justify flex-cross-bottom test-7">
+                    <div>我是第一个元素</div>
+                    <div>我是第二个元素</div>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+        <div class="box">
+            <h4>子元素X坐标两端对齐铺满</h4>
+            <div class="info">
+
+            </div>
+            <div class="code">
+                <!-- start -->
+                <style type="text/css">
+                    .test-7 {
+                        height: 200px;
+                        background: #222;
+                    }
+                    
+                    .test-7 div:nth-child(odd) {
+                        background: blue;
+                    }
+                    
+                    .test-7 div:nth-child(even) {
+                        background: red;
+                    }
+                </style>
+                <div class="flex flex-main-justify flex-cross-stretch test-7">
+                    <div>我是第一个元素</div>
+                    <div>我是第二个元素</div>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+        <div class="box">
+            <h4>子元素Y坐标两端对齐铺满</h4>
+            <div class="info">
+
+            </div>
+            <div class="code">
+                <!-- start -->
+                <style type="text/css">
+                    .test-8 {
+                        height: 200px;
+                        background: #222;
+                    }
+                    
+                    .test-8 div:nth-child(odd) {
+                        background: blue;
+                    }
+                    
+                    .test-8 div:nth-child(even) {
+                        background: red;
+                    }
+                </style>
+                <div class="flex flex-top flex-main-justify flex-cross-stretch test-8">
+                    <div>我是第一个元素</div>
+                    <div>我是第二个元素</div>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+
+        <div class="box">
+            <h4>左右两端元素宽度跟随子元素宽度，中间元素自动占满剩下宽度</h4>
+            <div class="info">
+
+            </div>
+            <div class="code">
+                <!-- start -->
+                <style type="text/css">
+                    .test-9 {
+                        height: 200px;
+                        background: #222;
+                    }
+                    
+                    .test-9 div:nth-child(odd) {
+                        background: blue;
+                    }
+                    
+                    .test-9 div:nth-child(even) {
+                        background: red;
+                    }
+                </style>
+                <div class="flex flex-main-justify flex-cross-stretch test-9">
+                    <div>我是第一个元素</div>
+                    <div class="flex-box-1">我是第二个元素</div>
+                    <div>我是第三个元素</div>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+        <div class="box">
+            <h4>上下两端元素宽度跟随子元素宽度，中间元素自动占满剩下宽度</h4>
+            <div class="info">
+
+            </div>
+            <div class="code">
+                <!-- start -->
+                <style type="text/css">
+                    .test-10 {
+                        height: 200px;
+                        background: #222;
+                    }
+                    
+                    .test-10 div:nth-child(odd) {
+                        background: blue;
+                    }
+                    
+                    .test-10 div:nth-child(even) {
+                        background: red;
+                    }
+                </style>
+                <div class="flex flex-top flex-main-justify flex-cross-stretch test-10">
+                    <div>我是第一个元素</div>
+                    <div class="flex-box-1">我是第二个元素</div>
+                    <div>我是第二个元素</div>
                 </div>
                 <!-- end -->
             </div>
