@@ -213,7 +213,10 @@
                 <div> flex-cross-center：上下居中对齐</div>
                 <div> flex-cross-baseline：高度跟随内容高度</div>
                 <div> flex-cross-stretch：高度并排铺满</div>
-                <h5>子元素可选参数（可选参）</h5>
+                <h5>设置子元素是否换行（可选参）</h5>
+                <div> flex-nowrap：不换行（默认）</div>
+                <div> flex-wrap：换行</div>
+                <h5>子元素设置可选参数（可选参）</h5>
                 <div>flex-box-0：禁止元素伸缩（默认）</div>
                 <div>flex-box-1：允许元素伸缩</div>
             </div>
@@ -606,6 +609,51 @@
                 <div class="flex flex-top flex-main-justify flex-cross-stretch test-10">
                     <div>我是第一个元素</div>
                     <div class="flex-box-1">我是第二个元素</div>
+                    <div>我是第二个元素</div>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+        <div class="box">
+            <h4>子元素自动换行</h4>
+            <div class="info">
+
+            </div>
+            <div class="code">
+                <!-- start -->
+                <style type="text/css">
+                    .test-11 {
+                        height: 200px;
+                        background: #222;
+                    }
+                    
+                    .test-11 div {
+                        margin: 10px;
+                    }
+                    
+                    .test-11 div:nth-child(odd) {
+                        background: blue;
+                    }
+                    
+                    .test-11 div:nth-child(even) {
+                        background: red;
+                    }
+                </style>
+                <div class="flex flex-cross-stretch flex-wrap test-11">
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
+                    <div>我是第一个元素</div>
                     <div>我是第二个元素</div>
                 </div>
                 <!-- end -->

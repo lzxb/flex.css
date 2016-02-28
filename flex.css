@@ -175,6 +175,29 @@
 
 
 /*
+    默认，不允许子元素换行
+*/
+
+.flex,
+.flex.flex-nowrap {
+    -webkit-box-lines: single;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+
+/*
+    允许子元素换行
+*/
+
+.flex.flex-wrap {
+    -webkit-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+
+/*
     子元素属性：不伸缩
 */
 
