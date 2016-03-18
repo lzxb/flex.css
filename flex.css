@@ -122,7 +122,6 @@
     交叉轴对齐方式：从上到下
 */
 
-.flex,
 .flex.flex-cross-top {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
@@ -167,6 +166,7 @@
     交叉轴对齐方式：高度并排铺满
 */
 
+.flex,
 .flex.flex-cross-stretch {
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
