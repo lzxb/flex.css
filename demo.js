@@ -18,5 +18,14 @@
         }
     }
 
+    var demo = document.querySelectorAll('.content .demo');
+
+    for (var i = 0; i < demo.length; i++) {
+        var con = demo[i].parentNode;
+        var text = document.createElement('textarea');
+        text.value = con.innerHTML;
+        con.appendChild(text);
+    }
+
 
 })();
