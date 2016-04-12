@@ -1,675 +1,210 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=2.0">
-    <title>flex布局神器</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0">
+    <title>flex.css 移动端flex布局神器</title>
     <link href="flex.min.css" rel="stylesheet">
-    <base target="_blank">
-    <style type="text/css">
-        * {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            text-decoration: none;
-        }
-        
-        h4 {
-            line-height: 38px;
-            font-weight: normal;
-            font-size: 14px;
-            color: #555;
-        }
-        
-        body {
-            line-height: 38px;
-        }
-        
-        .main {
-            max-width: 980px;
-            margin: 0 auto;
-            border: 1px solid #ddd;
-        }
-        
-        .box {
-            padding: 20px;
-        }
-        
-        .info {
-            padding: 10px;
-            line-height: 28px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            color: #333;
-            background: #eee;
-        }
-        
-        h5 {
-            padding-top: 10px;
-            font-size: 13px;
-            font-weight: normal;
-            color: #176B79;
-        }
-        
-        .demo {
-            padding: 20px;
-            line-height: 25px;
-        }
-        
-        .demo select {
-            padding: 3px 5px;
-            margin-left: 5px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        
-        #test {
-            height: 200px;
-            margin: 20px auto;
-            background: blue;
-        }
-        
-        #test >div {
-            padding: 10px;
-            margin: 10px;
-            background: red;
-        }
-        
-        #log {
-            padding: 10px;
-            text-align: center;
-            font-size: 13px;
-            line-height: 28px;
-            color: #555;
-        }
-        
-        .header-title {
-            padding-top: 5px;
-            font-size: 16px;
-            text-align: center;
-            font-size: #555;
-        }
-        
-        .header-about {
-            padding: 10px;
-            line-height: 24px;
-            text-align: center;
-            font-size: 13px;
-            color: #888;
-        }
-    </style>
-    <script>
-        function setClass() {
-            var select = document.querySelectorAll('.demo select');
-            var className = 'flex';
-
-            for (var i = 0; i < select.length; i++) {
-                className += ' ' + select[i].value;
-            }
-            document.getElementById('test').className = className;
-            document.getElementById('log').innerHTML = className;
-        }
-    </script>
+    <link href="demo.css" rel="stylesheet">
 </head>
 
-<body onload="setClass();">
-    <div class="main">
-        <h2 class="header-title">移动端flex布局神器，兼容微信，UC，webview等移动端主流浏览器</h2>
-        <p class="header-about">
-            NodeJS前端分享群 133240225
-            <br> 深圳html5分享群 170761660
-            <br>如有bug，请联系狼族小狈QQ：1340641314
-            <br>
-            <strong>必看问题：移动端不能完整的支持flex布局？</strong>
-            <br> flex是一个非常好的css3布局，但是在移动端很多浏览器不支持display: flex，仅支持display: -webkit-box，所以flex.css写了三种语法：
-            <br> display: -webkit-box;
-            <br> display: -webkit-flex;
-            <br> display: flex;
-            <br> 只需要调用flex.css相关的class，就能保证兼容移动端各种主流浏览器，微信端和webview上完美运行。
-        </p>
-        <div class="demo">
-            <div class="flex">
-                <div class="flex flex-box-1">
-                    <div class="flex-box-0">主轴方向（可选）</div>
-                    <div class="flex-box-1">
-                        <select onchange="setClass();">
-                            <option value="flex-left">从左到右</option>
-                            <option value="flex-right">从右到左</option>
-                            <option value="flex-top">从上到下</option>
-                            <option value="flex-bottom">从下到上</option>
-                        </select>
-                    </div>
+<body>
+    <div class="about">flex.css，移动端布局神器，让你用最快的速度，并且用最优雅的方式完成复杂的移动端布局，让你专注于编写内容呈现效果，完美兼容Android，ios，微信端。
+        <br> <b style="color:#49ff00;">深圳html5开发者社群：170761660</b>
+    </div>
+    <div class="item">
+        <div class="tit">快速入门</div>
+        <div class="content">flex只有两个属性，一个是容器属性flex，一个是子元素属性flex-box
+            <br> 如：
+            <textarea>
+                <div flex="dir:left main:left cross:top">
+                    <div flex-box="0"></div>
                 </div>
-                <div class="flex flex-box-1">
-                    <div class="flex-box-0">主轴对齐方式（可选）</div>
-                    <div class="flex-box-1">
-                        <select onchange="setClass();">
-                            <option value="flex-main-left">左对齐</option>
-                            <option value="flex-main-right">右对齐</option>
-                            <option value="flex-main-center">居中对齐</option>
-                            <option value="flex-main-justify">两端对齐</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="flex flex-box-1">
-                    <div class="flex-box-0">交叉轴对齐方式</div>
-                    <div class="flex-box-1">
-                        <select onchange="setClass();">
-                            <option value="flex-cross-top">上对齐</option>
-                            <option value="flex-cross-bottom">下对齐</option>
-                            <option value="flex-cross-center">上下居中对齐</option>
-                            <option value="flex-cross-baseline">高度跟随内容高度</option>
-                            <option value="flex-cross-stretch">高度并排铺满</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+            </textarea>
         </div>
-        <div id="test">
-            <div>left</div>
-            <div>
-                <br>center
-                <br>
-            </div>
-            <div>right</div>
+    </div>
+    <div class="item">
+        <div class="tit">flex属性大全</div>
+        <ul class="attr">
+            <li>
+                <h3>dir：主轴方向</h3>
+                <ul class="query">
+                    <li>top：从上到下</li>
+                    <li>right：从右到左</li>
+                    <li>bottom：从上到下</li>
+                    <li>left：从左到右（默认）</li>
+                </ul>
+            </li>
+            <li>
+                <h3>main：主轴对齐方式</h3>
+                <ul class="query">
+                    <li>right：从右到左</li>
+                    <li>left：从左到右（默认）</li>
+                    <li>justify：两端对齐</li>
+                    <li>center：居中对齐</li>
+                </ul>
+            </li>
+            <li>
+                <h3>cross：交叉轴对齐方式</h3>
+                <ul class="query">
+                    <li>top：从上到下</li>
+                    <li>bottom：从上到下</li>
+                    <li>baseline：跟随内容高度对齐</li>
+                    <li>center：居中对齐</li>
+                    <li>stretch：高度并排铺满（默认）</li>
+                </ul>
+            </li>
+            <li>
+                <h3>wrap：是否允许子元素换行</h3>
+                <ul class="query">
+                    <li>true：允许换行</li>
+                    <li>false：不允许换行（默认）</li>
+                </ul>
+            </li>
+            <li>
+                <h3>box：子元素设置</h3>
+                <ul class="query">
+                    <li>mean：子元素平分宽度</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="item">
+        <div class="tit">flex-box属性说明</div>
+        <div class="content">
+            取值范围(0-10)，单独设置子元素剩余空间的如何分配，设置为0，则子元素不占用多余的剩余空间
+            <br>剩余空间分配 = 当前box值/子元素的box值相加之和
         </div>
-        <div id="log"></div>
-        <div class="box">
-            <h4>1.首先在页面head中引入flex.min.css</h4>
-            <div class="info">
-                &lt;link rel="stylesheet" href="flex.min.css"&gt;
-            </div>
-        </div>
-        <div class="box">
-            <h4>2.给元素class添加flex，便会声明了一个弹性布局，其子元素自动成为容器成员</h4>
-            <div class="info">
-                <pre>
-&lt;div class="flex"&gt; 
-    &lt;div&gt; &lt;/div&gt; 
-    &lt;div&gt; &lt;/div&gt; 
-    &lt;div&gt; &lt;/div&gt; 
-&lt;/div&gt;
-</pre>
-            </div>
-        </div>
-        <div class="box">
-            <h4>3.class说明：</h4>
-            <div class="info">
-                <h5>设置为flex布局（必选）</h5>
-                <div> flex：元素定义弹性布局后，元素可选（主轴方向），（主轴对齐方式），（交叉轴对齐方式）的参数</div>
-                <h5>设置主轴方向（可选参）</h5>
-                <div> flex-left：从左到右（默认）</div>
-                <div> flex-right：从右到左</div>
-                <div> flex-top：从上到下</div>
-                <div> flex-bottom：从下到上</div>
-                <h5>设置主轴对齐方式（可选参）</h5>
-                <div> flex-main-left：左对齐（默认）</div>
-                <div> flex-main-right：右对齐</div>
-                <div> flex-main-center：居中对齐</div>
-                <div> flex-main-justify：两端对齐</div>
-                <h5>设置交叉轴对齐方式（可选参）</h5>
-                <div> flex-cross-top：上对齐</div>
-                <div> flex-cross-bottom：下对齐</div>
-                <div> flex-cross-center：上下居中对齐</div>
-                <div> flex-cross-baseline：高度跟随内容高度</div>
-                <div> flex-cross-stretch：高度并排铺满（默认）</div>
-                <h5>设置子元素是否换行（可选参）</h5>
-                <div> flex-nowrap：不换行（默认）</div>
-                <div> flex-wrap：换行</div>
-                <h5>子元素设置可选参数（可选参）</h5>
-                <div>flex-box-0：禁止元素伸缩（默认）</div>
-                <div>flex-box-1：允许元素伸缩</div>
-            </div>
-        </div>
-        <div class="box">
-            <h4>子元素水平居中</h4>
-            <div class="info">
+    </div>
 
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-0 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-0 div:nth-child(1) {
-                        width: 100px;
-                        height: 100px;
-                    }
-                    
-                    .test-0 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-0 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex flex-main-center flex-cross-center test-0">
-                    <div>我是第一个元素</div>
-                </div>
-                <!-- end -->
-            </div>
-
-        </div>
-        <div class="box">
-            <h4>左边固定宽度，右边把剩余宽度铺满</h4>
-            <div class="info">
-                <pre>
-                </pre>
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-1 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-1 div:nth-child(1) {
-                        width: 200px;
-                    }
-                    
-                    .test-1 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-1 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex test-1">
-                    <div class="flex-box-0">我是第一个元素</div>
-                    <div class="flex-box-1">我是第二个元素</div>
-                </div>
-                <!-- end -->
-
+    <div class="item">
+        <div class="tit">主轴方向：<span data-set="dir:top">从上到下</span><span data-set="dir:right">从右到左</span><span data-set="dir:bottom">从下到上</span><span class="on" data-set="dir:left">从左到右</span></div>
+        <div class="content">
+            <div class="demo" flex="dir:left">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
             </div>
         </div>
-        <div class="box">
-            <h4>左边把剩余宽度铺满，右边固定宽度</h4>
-            <div class="info">
-
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-2 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-2 div:nth-child(2) {
-                        width: 200px;
-                    }
-                    
-                    .test-2 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-2 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex test-2">
-                    <div class="flex-box-1">我是第一个元素</div>
-                    <div class="flex-box-0">我是第二个元素</div>
-                </div>
-                <!-- end -->
-
+    </div>
+    <div class="item">
+        <div class="tit">主轴对齐方式：<span data-set="main:right">从右到左</span><span class="on" data-set="main:left">从左到右</span><span data-set="main:justify">两端对齐</span><span data-set="main:center">居中对齐</span></div>
+        <div class="content">
+            <div class="demo" flex="main:left">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
             </div>
         </div>
-        <div class="box">
-            <h4>子元素平分宽度</h4>
-            <div class="info">
-
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-3 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-3>div {
-                        width: 0;
-                    }
-                    
-                    .test-3 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-3 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex test-3">
-                    <div class="flex-box-1">我是第一个元素1</div>
-                    <div class="flex-box-1">我是第二个元素22</div>
-                    <div class="flex-box-1">我是第三个元素333</div>
-                    <div class="flex-box-1">我是第四个元素4444</div>
-                    <div class="flex-box-1">我是第五个元素55555</div>
-                </div>
-                <!-- end -->
+    </div>
+    <div class="item">
+        <div class="tit">交叉轴对齐方式：<span data-set="cross:top">从上到下</span><span data-set="cross:bottom">从下到上</span><span data-set="cross:baseline">跟随内容高度对齐</span><span data-set="cross:center">居中对齐</span><span class="on" data-set="cross:stretch">高度并排铺满</span></div>
+        <div class="content">
+            <div class="demo" flex="cross:stretch">
+                <div>1
+                    <br>1*2</div>
+                <div>2
+                    <br>2*2
+                    <br>2*3</div>
+                <div>3
+                    <br>3*2
+                    <br>3*3
+                    <br>3*4</div>
             </div>
         </div>
-        <div class="box">
-            <h4>子元素自动铺满剩余的宽度</h4>
-            <div class="info">
-
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-4 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-4 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-4 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex test-4">
-                    <div class="flex-box-1">我是第一个元素1</div>
-                    <div class="flex-box-1">我是第二个元素22</div>
-                    <div class="flex-box-1">我是第三个元素333</div>
-                    <div class="flex-box-1">我是第四个元素444444444444444444444444</div>
-                    <div class="flex-box-1">我是第五个元素55555</div>
-                </div>
-                <!-- end -->
+    </div>
+    <div class="item">
+        <div class="tit">是否允许子元素换行：<span data-set="wrap:true">允许换行</span><span class="on" data-set="wrap:false">不允许换行</span></div>
+        <div class="content">
+            <div class="demo" flex="wrap:false">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
             </div>
         </div>
-        <div class="box">
-            <h4>子元素顶部两端对齐</h4>
-            <div class="info">
-
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-4 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-4 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-4 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex flex-main-justify test-4">
-                    <div>我是第一个元素</div>
-                    <div>我是第二个元素</div>
-                </div>
-                <!-- end -->
-            </div>
-        </div>
-        <div class="box">
-            <h4>子元素底部两端对齐</h4>
-            <div class="info">
-
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-5 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-5 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-5 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex flex-main-justify flex-cross-bottom test-5">
-                    <div>我是第一个元素</div>
-                    <div>我是第二个元素</div>
-                </div>
-                <!-- end -->
-            </div>
-        </div>
-        <div class="box">
-            <h4>子元素左边上下两端对齐</h4>
-            <div class="info">
-
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-6 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-6 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-6 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex flex-top flex-main-justify flex-cross-top test-6">
-                    <div>我是第一个元素</div>
-                    <div>我是第二个元素</div>
-                </div>
-                <!-- end -->
-            </div>
-        </div>
-        <div class="box">
-            <h4>子元素右边上下两端对齐</h4>
-            <div class="info">
-
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-7 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-7 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-7 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex flex-top flex-main-justify flex-cross-bottom test-7">
-                    <div>我是第一个元素</div>
-                    <div>我是第二个元素</div>
-                </div>
-                <!-- end -->
-            </div>
-        </div>
-        <div class="box">
-            <h4>子元素X坐标两端对齐铺满</h4>
-            <div class="info">
-
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-7 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-7 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-7 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex flex-main-justify flex-cross-stretch test-7">
-                    <div>我是第一个元素</div>
-                    <div>我是第二个元素</div>
-                </div>
-                <!-- end -->
-            </div>
-        </div>
-        <div class="box">
-            <h4>子元素Y坐标两端对齐铺满</h4>
-            <div class="info">
-
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-8 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-8 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-8 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex flex-top flex-main-justify flex-cross-stretch test-8">
-                    <div>我是第一个元素</div>
-                    <div>我是第二个元素</div>
-                </div>
-                <!-- end -->
-            </div>
-        </div>
-
-        <div class="box">
-            <h4>左右两端元素宽度跟随子元素宽度，中间元素自动占满剩下宽度</h4>
-            <div class="info">
-
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-9 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-9 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-9 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex flex-main-justify flex-cross-stretch test-9">
-                    <div>我是第一个元素</div>
-                    <div class="flex-box-1">我是第二个元素</div>
-                    <div>我是第三个元素</div>
-                </div>
-                <!-- end -->
-            </div>
-        </div>
-        <div class="box">
-            <h4>上下两端元素宽度跟随子元素宽度，中间元素自动占满剩下宽度</h4>
-            <div class="info">
-
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-10 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-10 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-10 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex flex-top flex-main-justify flex-cross-stretch test-10">
-                    <div>我是第一个元素</div>
-                    <div class="flex-box-1">我是第二个元素</div>
-                    <div>我是第二个元素</div>
-                </div>
-                <!-- end -->
-            </div>
-        </div>
-        <div class="box">
-            <h4>子元素自动换行</h4>
-            <div class="info">
-
-            </div>
-            <div class="code">
-                <!-- start -->
-                <style type="text/css">
-                    .test-11 {
-                        height: 200px;
-                        background: #222;
-                    }
-                    
-                    .test-11 div {
-                        margin: 10px;
-                    }
-                    
-                    .test-11 div:nth-child(odd) {
-                        background: blue;
-                    }
-                    
-                    .test-11 div:nth-child(even) {
-                        background: red;
-                    }
-                </style>
-                <div class="flex flex-cross-stretch flex-wrap test-11">
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第一个元素</div>
-                    <div>我是第二个元素</div>
-                </div>
-                <!-- end -->
+    </div>
+    <div class="item">
+        <div class="tit">子元素设置：<span class="on" data-set="box:mean">平分宽度</span></div>
+        <div class="content">
+            <div class="demo" flex="box:mean">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
             </div>
         </div>
     </div>
 
-    <script>
-        var code = document.querySelectorAll('.info + .code');
-
-        for (var i = 0; i < code.length; i++) {
-            var text = '<pre>' + code[i].innerHTML.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre>';
-            console.log(text);
-            code[i].parentNode.querySelector('.info').innerHTML = text;
-        }
-    </script>
+    <div class="item">
+        <div class="tit">左边固定宽度，右边把剩余宽度占满</div>
+        <div class="content">
+            <div class="demo" flex>
+                <div flex-box="0">1</div>
+                <div flex-box="1">2</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">右边固定宽度，左边把剩余宽度占满</div>
+        <div class="content">
+            <div class="demo" flex="dir:right">
+                <div flex-box="0">1</div>
+                <div flex-box="1">2</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">上边固定宽度，下边把剩余宽度占满</div>
+        <div class="content">
+            <div class="demo" flex="dir:top">
+                <div flex-box="0">1</div>
+                <div flex-box="1">2</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">下边固定宽度，上边把剩余宽度占满</div>
+        <div class="content">
+            <div class="demo" flex="dir:top">
+                <div flex-box="0">1</div>
+                <div flex-box="1">2</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">左右两边对齐</div>
+        <div class="content">
+            <div class="demo" flex="main:justify">
+                <div>1</div>
+                <div>2</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">上下两边对齐</div>
+        <div class="content">
+            <div class="demo" flex="dir:top main:justify">
+                <div>1</div>
+                <div>2</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">垂直居中</div>
+        <div class="content">
+            <div class="demo" flex="main:center cross:center">
+                <div>1</div>
+            </div>
+        </div>
+    </div>
+    <script src="demo.js"></script>
 </body>
 
 </html>
