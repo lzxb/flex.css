@@ -17,7 +17,8 @@
         display: block;
         overflow: hidden;
     }
-    &>[flex], &>[data-flex]{
+    &>[flex],
+    &>[data-flex] {
         overflow: hidden;
         display: -webkit-box;
         display: -webkit-flex;
@@ -215,6 +216,20 @@
 [flex-box],
 [data-flex-box] {
     width: auto;
+}
+
+[flex~="dir:top"][flex~="box:mean"]>*,
+[flex~="dir:bottom"][flex~="box:mean"]>*,
+[data-flex~="dir:top"][data-flex~="box:mean"]>*,
+[data-flex~="dir:bottom"][data-flex~="box:mean"]>*,
+{
+    width: auto;
+    height: 0;
+    -webkit-box-flex: 1.0;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
 }
 
 
