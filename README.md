@@ -1,11 +1,37 @@
-# flex
-flex.css，轻量级移动端布局神器，让你用最快的速度，并且用最优雅的方式完成复杂的移动端布局，让你专注于编写内容呈现效果，完美兼容Android，ios，微信端。<br><br>
-<strong>必看问题：移动端不能完整的支持flex布局？</strong>
-<br> flex是一个非常好的css3布局，但是在移动端很多浏览器不支持display: flex，仅支持display: -webkit-box，所以flex.css写了三种语法：
-<br> display: -webkit-box;
-<br> display: -webkit-flex;
-<br> display: flex;
+# flex.css
+====
 
+### 简介
+```
+flex.css，轻量级移动端布局神器，
+让你用最快的速度，
+并且用最优雅的方式完成复杂的移动端布局，
+让你专注于编写内容呈现效果，
+完美兼容Android，ios，微信端
+```
+
+### 兼容性
+```
+flex布局分为旧版本dispaly: box;，过渡版本dispaly: flexbox;，以及现在的标准版本display: flex;
+Android 
+  2.1 开始就支持旧版本 display:-webkit-box;
+  4.4 开始支持标准版本 display: flex;
+  
+IOS 
+  6.0 开始支持旧版本 display:-webkit-box;
+  7.0 开始支持标准版本 display: flex;
+```  
+
+### 优势
+```
+有的时候，为了兼容不得同时写旧版本和新版本两种语法，耗时耗力，
+虽然可以使用autoprefixer可以在一定程度上减少压力，
+如果不熟悉移动端开发的人，很容易误用某些标准版本而旧版本没有或不支持的属性
+，就容易踩坑。flex.css经过了大量的项目检测，
+可以保证用在我们的项目不会出现只支持了标准版本而旧版本不支持此属性的情况。
+相对于原生的flex复杂的概念，使用flex.css则容易上手得多，
+将布局和风格进行分离，可以更友好的进行维护和修改。
+```
 <br> <b style="color:#49ff00;">深圳html5开发者社群：170761660</b>
 
 <br> <b style="color:#49ff00;">NodeJS前端分享群：133240225</b>
