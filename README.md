@@ -32,6 +32,12 @@ IOS
 相对于原生的flex复杂的概念，使用flex.css则容易上手得多，
 将布局和风格进行分离，可以更友好的进行维护和修改。
 ```
+
+### 使用
+```
+可以根据自己的需要，使用不同的属性版本来进行匹配布局
+flex.css 使用flex属性匹配
+data-flex 使用data-flex属性匹配（React使用）
 <br> <b style="color:#49ff00;">深圳html5开发者社群：170761660</b>
 
 <br> <b style="color:#49ff00;">NodeJS前端分享群：133240225</b>
