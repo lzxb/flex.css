@@ -7,5 +7,7 @@ flex.css，轻量级移动端布局神器，让你用最快的速度，并且用
 <br> display: flex;
 
 <br> <b style="color:#49ff00;">深圳html5开发者社群：170761660</b>
+
+<br> <b style="color:#49ff00;">NodeJS前端分享群：133240225</b>
 <br> <b style="color:#49ff00;">github：https://github.com/1340641314/flex</b>
 ![Alt text](shot/doc.png)

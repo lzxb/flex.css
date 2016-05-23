@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0">
     <title>flex.css 移动端flex布局神器</title>
-    <link href="flex.min.css" rel="stylesheet">
+    <link href="./dist/flex.min.css" rel="stylesheet">
     <link href="demo.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="about">flex.css，轻量级移动端布局神器，让你用最快的速度，并且用最优雅的方式完成复杂的移动端布局，让你专注于编写内容呈现效果，完美兼容Android，ios，微信端。
         <br> <b style="color:#49ff00;">深圳html5开发者社群：170761660</b>
+        <br> <b style="color:#49ff00;">NodeJS前端分享群：133240225</b>
         <br> <b style="color:#49ff00;">github：https://github.com/1340641314/flex</b>
     </div>
     <div class="item">
@@ -60,6 +61,9 @@
                 <h3>box：子元素设置</h3>
                 <ul class="query">
                     <li>mean：子元素平分空间</li>
+                    <li>first：第一个子元素不要多余空间，其他子元素平分多余空间</li>
+                    <li>last：最后一个子元素不要多余空间，其他子元素平分多余空间</li>
+                    <li>justify：两端第一个元素不要多余空间，其他子元素平分多余空间</li>
                 </ul>
             </li>
         </ul>
@@ -67,8 +71,8 @@
     <div class="item">
         <div class="tit">flex-box属性说明</div>
         <div class="content">
-            取值范围(0-10)，单独设置子元素剩余空间的如何分配，设置为0，则子元素不占用多余的剩余空间
-            <br>剩余空间分配 = 当前box值/子元素的box值相加之和
+            取值范围(0-10)，单独设置子元素多余空间的如何分配，设置为0，则子元素不占用多余的多余空间
+            <br>多余空间分配 = 当前box值/子元素的box值相加之和
         </div>
     </div>
 
@@ -109,7 +113,7 @@
         </div>
     </div>
     <div class="item">
-        <div class="tit">子元素设置：<span class="on" data-set="dir:left box:mean">左右平分宽度</span><span data-set="dir:top box:mean">上下平分宽度</span></div>
+        <div class="tit">子元素宽度设置：<span class="on" data-set="dir:left box:mean">平分</span><span data-set="dir:left box:first">第一个固定</span><span data-set="dir:left box:last">最后一个固定</span><span data-set="dir:left box:justify">两端第一个固定</span></div>
         <div class="content">
             <div class="demo" flex="box:mean">
                 <div>1</div>
@@ -119,7 +123,17 @@
         </div>
     </div>
     <div class="item">
-        <div class="tit">左边固定宽度，右边把剩余宽度占满</div>
+        <div class="tit">子元素高度设置：<span class="on" data-set="dir:top box:mean">平分</span><span data-set="dir:top box:first">第一个固定</span><span data-set="dir:top box:last">最后一个固定</span><span data-set="dir:top box:justify">两端第一个固定</span></div>
+        <div class="content">
+            <div class="demo" flex="box:mean">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">左边固定宽度，右边把多余宽度占满</div>
         <div class="content">
             <div class="demo" flex>
                 <div flex-box="0">1</div>
@@ -128,16 +142,16 @@
         </div>
     </div>
     <div class="item">
-        <div class="tit">右边固定宽度，左边把剩余宽度占满</div>
+        <div class="tit">右边固定宽度，左边把多余宽度占满</div>
         <div class="content">
-            <div class="demo" flex="dir:right">
-                <div flex-box="0">1</div>
-                <div flex-box="1">2</div>
+            <div class="demo" flex="dir:right box:first">
+                <div>1</div>
+                <div>2</div>
             </div>
         </div>
     </div>
     <div class="item">
-        <div class="tit">上边固定宽度，下边把剩余宽度占满</div>
+        <div class="tit">上边固定宽度，下边把多余宽度占满</div>
         <div class="content">
             <div class="demo" flex="dir:top">
                 <div flex-box="0">1</div>
@@ -146,7 +160,7 @@
         </div>
     </div>
     <div class="item">
-        <div class="tit">下边固定宽度，上边把剩余宽度占满</div>
+        <div class="tit">下边固定宽度，上边把多余宽度占满</div>
         <div class="content">
             <div class="demo" flex="dir:top">
                 <div flex-box="1">1</div>

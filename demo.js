@@ -12,9 +12,11 @@
         set[i].onclick = function () {
             var on = this.parentNode.querySelector('.on');
             var demo = this.parentNode.parentNode.querySelector('.demo');
+            var textarea = this.parentNode.parentNode.querySelector('textarea');
             demo.setAttribute('flex', this.dataset.set);
             on.className = '';
             this.className = 'on';
+            textarea.value = demo.outerHTML;
         }
     }
 

@@ -1,0 +1,197 @@
+// out: null
+/*! flex.css v1.2.2 | 狼族小狈 https://github.com/1340641314/flex */
+/*
+    定义flex布局
+*/
+.app (@flex, @flex-box){
+    [@{flex}] {
+    overflow: hidden;
+    display: flex;
+        &>* {
+            display: block;
+            overflow: hidden;
+        }
+        &>[@{flex}]{
+            overflow: hidden;
+            display: flex;
+        }
+    }
+    /*
+        主轴方向：从左到右(默认)
+    */
+
+    [@{flex}~="dir:left"] {
+        flex-direction: row;
+    }
+
+
+    /*
+        主轴方向：从右到左
+    */
+
+    [@{flex}~="dir:right"]{
+        flex-direction: row-reverse;
+    }
+
+
+    /*
+        主轴方向：从上到下
+    */
+
+    [@{flex}~="dir:top"]{
+        flex-direction: column;
+    }
+
+
+    /*
+        主轴方向：从下到上
+    */
+
+    [@{flex}~="dir:bottom"] {
+        flex-direction: column-reverse;
+    }
+    
+    /*
+        主轴对齐方式：从左到右(默认)
+    */
+
+    [@{flex}~="main:left"]{
+        justify-content: flex-start;
+    }
+
+
+    /*
+        主轴对齐方式：从右到左
+    */
+
+    [@{flex}~="main:right"] {
+        justify-content: flex-end;
+    }
+
+
+    /*
+        主轴对齐方式：两端对齐
+    */
+
+    [@{flex}~="main:justify"] {
+        justify-content: space-between;
+    }
+
+
+    /*
+        主轴对齐方式：居中对齐
+    */
+
+    [@{flex}~="main:center"] {
+        justify-content: center;
+    }
+    /*
+        交叉轴齐方式：从上到下(默认)
+    */
+
+    [@{flex}~="cross:top"]{
+        align-items: flex-start;
+    }
+
+
+    /*
+        交叉轴齐方式：从下到上
+    */
+
+    [@{flex}~="cross:bottom"] {
+        align-items: flex-end;
+    }
+
+
+    /*
+        交叉轴齐方式：居中对齐
+    */
+
+    [@{flex}~="cross:center"] {
+        align-items: center;
+    }
+
+
+    /*
+        交叉轴齐方式：跟随内容高度对齐
+    */
+
+    [@{flex}~="cross:baseline"] {
+        align-items: baseline;
+    }
+
+
+    /*
+        交叉轴齐方式：高度并排铺满
+    */
+
+    [@{flex}~="cross:stretch"] {
+        align-items: stretch;
+    }
+    
+    /*
+        子元素平分宽度
+    */
+
+    [@{flex}~="box:mean"]>*, //所有元素
+    [@{flex}~="box:first"]>*, //第一个子元素
+    [@{flex}~="box:last"]>*, //最后一个子元素
+    [@{flex}~="box:justify"]>* //两端第一个子元素
+    {
+        width: 0%;
+        height: auto;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    
+    [@{flex}~="box:first"]>*:first-of-type, //第一个子元素
+    [@{flex}~="box:last"]>*:last-of-type, //最后一个子元素
+    [@{flex}~="box:justify"]>*:first-of-type, //两端第一个子元素
+    [@{flex}~="box:justify"]>*:last-of-type //两端最后一个子元素
+    { 
+        width: auto;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    /*
+        子元素平分高度
+    */
+    [@{flex}~="dir:top"][@{flex}~="box:mean"]>*,
+    [@{flex}~="dir:top"][@{flex}~="box:first"]>*, //第一个子元素
+    [@{flex}~="dir:top"][@{flex}~="box:last"]>*, //最后一个子元素
+    [@{flex}~="dir:top"][@{flex}~="box:justify"]>*, //两端最后一个子元素
+    [@{flex}~="dir:bottom"][@{flex}~="box:mean"]>*,
+    [@{flex}~="dir:bottom"][@{flex}~="box:first"]>*, //第一个子元素
+    [@{flex}~="dir:bottom"][@{flex}~="box:last"]>*, //最后一个子元素
+    [@{flex}~="dir:bottom"][@{flex}~="box:justify"]>* //两端最后一个子元素
+    {
+        width: auto;
+        height: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    [@{flex}~="dir:top"][@{flex}~="box:first"]>*:first-of-type, //第一个子元素
+    [@{flex}~="dir:top"][@{flex}~="box:last"]>*:last-of-type, //最后一个子元素
+    [@{flex}~="dir:top"][@{flex}~="box:justify"]>*:first-of-type, //两端第一一个子元素
+    [@{flex}~="dir:top"][@{flex}~="box:justify"]>*:last-of-type, //两端最后一个子元素
+    [@{flex}~="dir:bottom"][@{flex}~="box:first"]>*:first-of-type, //第一个子元素
+    [@{flex}~="dir:bottom"][@{flex}~="box:last"]>*:last-of-type, //最后一个子元素
+    [@{flex}~="dir:bottom"][@{flex}~="box:justify"]>*:first-of-type //两端第一一个子元素
+    [@{flex}~="dir:bottom"][@{flex}~="box:justify"]>*:last-of-type //两端最后一个子元素
+    {
+        height: auto;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    //子元素伸缩比例循环
+    .flex-box(10);
+    .flex-box(@n, @i: 1) when (@i =< @n) {
+        [@{flex-box}="@{i}"] {
+            flex-grow: @i;
+            flex-shrink: @i;
+        }
+        .flex-box(@n, (@i + 1));
+    }
+
+}
