@@ -16,7 +16,7 @@ flex.css
 ```
 
 
-### 兼容性
+### 支持情况
 ```
 flex布局分为旧版本dispaly: box;，过渡版本dispaly: flexbox;，以及现在的标准版本display: flex;
 Android 
