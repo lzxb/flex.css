@@ -25,16 +25,21 @@ flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版
 ```  
 
 ### 使用
-```
-可以根据自己的需要，使用不同的属性版本来进行匹配布局
-flex.css 使用flex属性匹配
-data-flex 使用data-flex属性匹配（React使用）
-```
 ```html
-<!-- 简单的子元素居中例子： -->
-<div flex="main:center cross:center" style="width:500px; height: 500px; background: #222">
-  <div style="background: #fff">看看我是不是居中的</div>
-</div>
+<!--
+  可以根据自己的需要，使用不同的属性版本来进行匹配布局
+  flex.min.css 使用flex属性匹配
+  data-flex.min.css 使用data-flex属性匹配（React使用）
+ -->
+<!-- flex属性匹配，简单的子元素居中例子： -->
+  <div flex="main:center cross:center" style="width:500px; height: 500px; background: #222">
+    <div style="background: #fff">看看我是不是居中的</div>
+  </div>
+  
+<!-- data-flex属性匹配，简单的子元素居中例子： -->
+  <div data-flex="main:center cross:center" style="width:500px; height: 500px; background: #222">
+    <div style="background: #fff">看看我是不是居中的</div>
+  </div>
 ```
 
 ### 其他
