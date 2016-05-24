@@ -38,8 +38,11 @@ IOS
 可以根据自己的需要，使用不同的属性版本来进行匹配布局
 flex.css 使用flex属性匹配
 data-flex 使用data-flex属性匹配（React使用）
-<br> <b style="color:#49ff00;">深圳html5开发者社群：170761660</b>
+```
 
-<br> <b style="color:#49ff00;">NodeJS前端分享群：133240225</b>
-<br> <b style="color:#49ff00;">github：https://github.com/1340641314/flex</b>
+### 其他
+深圳html5开发者社群：170761660
+NodeJS前端分享群：133240225
+
+### demo.html测试截图
 ![Alt text](shot/doc.png)
