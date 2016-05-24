@@ -41,8 +41,12 @@ data-flex 使用data-flex属性匹配（React使用）
 ```
 
 ### 其他
+```
 深圳html5开发者社群：170761660
 NodeJS前端分享群：133240225
+```
 
 ### demo.html测试截图
+```
 ![Alt text](shot/doc.png)
+```
