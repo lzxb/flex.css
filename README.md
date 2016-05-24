@@ -41,30 +41,35 @@ flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版
     <div style="background: #fff">看看我是不是居中的</div>
   </div>
 ```
-### 属性参数
+### flex属性大全
 ```
-flex属性大全
 dir：主轴方向
-  top：从上到下
-  right：从右到左
-  bottom：从上到下
-  left：从左到右（默认）
+    top：从上到下
+    right：从右到左
+    bottom：从上到下
+    left：从左到右（默认）
+```
+```
 main：主轴对齐方式
-  right：从右到左
-  left：从左到右（默认）
-  justify：两端对齐
-  center：居中对齐
+    right：从右到左
+    left：从左到右（默认）
+    justify：两端对齐
+    center：居中对齐
+```
+```
 cross：交叉轴对齐方式
-  top：从上到下
-  bottom：从上到下
-  baseline：跟随内容高度对齐
-  center：居中对齐
-  stretch：高度并排铺满（默认）
+    top：从上到下
+    bottom：从上到下
+    baseline：跟随内容高度对齐
+    center：居中对齐
+    stretch：高度并排铺满（默认）
+```
+```
 box：子元素设置
-  mean：子元素平分空间
-  first：第一个子元素不要多余空间，其他子元素平分多余空间
-  last：最后一个子元素不要多余空间，其他子元素平分多余空间
-  justify：两端第一个元素不要多余空间，其他子元素平分多余空间
+    mean：子元素平分空间
+    first：第一个子元素不要多余空间，其他子元素平分多余空间
+    last：最后一个子元素不要多余空间，其他子元素平分多余空间
+    justify：两端第一个元素不要多余空间，其他子元素平分多余空间
 ```
 
 ### flex-box属性说明
