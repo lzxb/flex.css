@@ -32,12 +32,12 @@ flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版
   data-flex.min.css 使用data-flex属性匹配（React使用）
  -->
 <!-- flex属性匹配，简单的子元素居中例子： -->
-  <div flex="main:center cross:center" style="width:500px; height: 500px; background: #222">
+  <div flex="main:center cross:center" style="width:500px; height: 500px; background: #108423">
     <div style="background: #fff">看看我是不是居中的</div>
   </div>
   
 <!-- data-flex属性匹配，简单的子元素居中例子： -->
-  <div data-flex="main:center cross:center" style="width:500px; height: 500px; background: #222">
+  <div data-flex="main:center cross:center" style="width:500px; height: 500px; background: #f1d722">
     <div style="background: #fff">看看我是不是居中的</div>
   </div>
 ```
