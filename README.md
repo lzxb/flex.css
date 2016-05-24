@@ -9,25 +9,22 @@ flex.css，轻量级移动端布局神器，
 让你专注于编写内容呈现效果，
 完美兼容Android，ios，微信端
 ```
-### 使用autoprefixer编译，支持范围：
-### ie10+
-### Anoroid 2.1+
-### IOS 6.0+
 
 
 ### 兼容性
 ```
 flex布局分为旧版本dispaly: box;，过渡版本dispaly: flexbox;，以及现在的标准版本display: flex;
 Android 
-  2.1 开始就支持旧版本 display:-webkit-box;
+  2.3 开始就支持旧版本 display:-webkit-box;
   4.4 开始支持标准版本 display: flex;
   
 IOS 
-  6.0 开始支持旧版本 display:-webkit-box;
-  7.0 开始支持标准版本 display: flex;
+  6.1 开始支持旧版本 display:-webkit-box;
+  7.1 开始支持标准版本 display: flex;
 
 flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版本时，回退到旧版本。
 ```  
+![Alt text](shot/caniuse.png)
 
 ### 使用
 ```html
