@@ -39,6 +39,12 @@ IOS
 flex.css 使用flex属性匹配
 data-flex 使用data-flex属性匹配（React使用）
 ```
+```html
+<!-- 简单的子元素居中例子： -->
+<div flex="main:center cross:center" style="width:100px; height: 100px; background: #222">
+  <div style="background: #fff">看看我是不是居中的</div>
+</div>
+```
 
 ### 其他
 ```
