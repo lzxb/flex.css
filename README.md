@@ -20,18 +20,9 @@ Android
 IOS 
   6.0 开始支持旧版本 display:-webkit-box;
   7.0 开始支持标准版本 display: flex;
-```  
 
-### 优势
-```
-有的时候，为了兼容不得同时写旧版本和新版本两种语法，耗时耗力，
-虽然可以使用autoprefixer可以在一定程度上减少压力，
-如果不熟悉移动端开发的人，很容易误用某些标准版本而旧版本没有或不支持的属性
-，就容易踩坑。flex.css经过了大量的项目检测，
-可以保证用在我们的项目不会出现只支持了标准版本而旧版本不支持此属性的情况。
-相对于原生的flex复杂的概念，使用flex.css则容易上手得多，
-将布局和风格进行分离，可以更友好的进行维护和修改。
-```
+flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版本时，回退到旧版本。
+```  
 
 ### 使用
 ```
@@ -41,7 +32,7 @@ data-flex 使用data-flex属性匹配（React使用）
 ```
 ```html
 <!-- 简单的子元素居中例子： -->
-<div flex="main:center cross:center" style="width:100px; height: 100px; background: #222">
+<div flex="main:center cross:center" style="width:500px; height: 500px; background: #222">
   <div style="background: #fff">看看我是不是居中的</div>
 </div>
 ```
