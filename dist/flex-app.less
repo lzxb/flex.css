@@ -1,5 +1,5 @@
 // out: null
-/*! flex.css v1.2.2 | 狼族小狈 https://github.com/1340641314/flex */
+/*! flex.css v1.2.3 | 狼族小狈 https://github.com/1340641314/flex */
 /*
     定义flex布局
 */
@@ -144,10 +144,10 @@
         flex-shrink: 1;
     }
     
-    [@{flex}~="box:first"]>*:first-of-type, //第一个子元素
-    [@{flex}~="box:last"]>*:last-of-type, //最后一个子元素
-    [@{flex}~="box:justify"]>*:first-of-type, //两端第一个子元素
-    [@{flex}~="box:justify"]>*:last-of-type //两端最后一个子元素
+    [@{flex}~="box:first"]>*:first-child, //第一个子元素
+    [@{flex}~="box:last"]>*:last-child, //最后一个子元素
+    [@{flex}~="box:justify"]>*:first-child, //两端第一个子元素
+    [@{flex}~="box:justify"]>*:last-child //两端最后一个子元素
     { 
         width: auto;
         flex-grow: 0;
@@ -170,14 +170,14 @@
         flex-grow: 1;
         flex-shrink: 1;
     }
-    [@{flex}~="dir:top"][@{flex}~="box:first"]>*:first-of-type, //第一个子元素
-    [@{flex}~="dir:top"][@{flex}~="box:last"]>*:last-of-type, //最后一个子元素
-    [@{flex}~="dir:top"][@{flex}~="box:justify"]>*:first-of-type, //两端第一一个子元素
-    [@{flex}~="dir:top"][@{flex}~="box:justify"]>*:last-of-type, //两端最后一个子元素
-    [@{flex}~="dir:bottom"][@{flex}~="box:first"]>*:first-of-type, //第一个子元素
-    [@{flex}~="dir:bottom"][@{flex}~="box:last"]>*:last-of-type, //最后一个子元素
-    [@{flex}~="dir:bottom"][@{flex}~="box:justify"]>*:first-of-type //两端第一一个子元素
-    [@{flex}~="dir:bottom"][@{flex}~="box:justify"]>*:last-of-type //两端最后一个子元素
+    [@{flex}~="dir:top"][@{flex}~="box:first"]>*:first-child, //第一个子元素
+    [@{flex}~="dir:top"][@{flex}~="box:last"]>*:last-child, //最后一个子元素
+    [@{flex}~="dir:top"][@{flex}~="box:justify"]>*:first-child, //两端第一一个子元素
+    [@{flex}~="dir:top"][@{flex}~="box:justify"]>*:last-child, //两端最后一个子元素
+    [@{flex}~="dir:bottom"][@{flex}~="box:first"]>*:first-child, //第一个子元素
+    [@{flex}~="dir:bottom"][@{flex}~="box:last"]>*:last-child, //最后一个子元素
+    [@{flex}~="dir:bottom"][@{flex}~="box:justify"]>*:first-child //两端第一一个子元素
+    [@{flex}~="dir:bottom"][@{flex}~="box:justify"]>*:last-child //两端最后一个子元素
     {
         height: auto;
         flex-grow: 0;
