@@ -184,9 +184,9 @@
         flex-shrink: 0;
     }
 
-    //子元素伸缩比例循环
+    //子元素伸缩比例循环 
     .flex-box(10);
-    .flex-box(@n, @i: 1) when (@i =< @n) {
+    .flex-box(@n, @i: 0) when (@i =< @n) {
         [@{flex-box}="@{i}"] {
             flex-grow: @i;
             flex-shrink: @i;
