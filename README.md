@@ -34,7 +34,8 @@ flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版
 ### 使用
 ```html
 <!--
-  可以根据自己的需要，使用不同的属性版本来进行匹配布局
+  1.将dist目录下的flex.min.css或data-flex.min.css加载到你的程序中
+  2.根据自己的需要，使用不同的属性来布局
   flex.min.css 使用flex属性匹配
   data-flex.min.css 使用data-flex属性匹配（React使用）
  -->
