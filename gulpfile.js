@@ -2,16 +2,26 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var autoprefixer = require('gulp-autoprefixer');
 var cssmin = require('gulp-minify-css');
-var rename = require("gulp-rename");
+var rename = require('gulp-rename');
 
 /**
- * 定义less编译任务，命令：gulp less
+ * 定义less编译任务
  */
-gulp.task('less', function () {
+gulp.task('default', function () {
     gulp.src(['src/flex.less', 'src/data-flex.less']) //需要编译的less文件
         .pipe(less())
         .pipe(autoprefixer({ //添加浏览器兼容的前缀
-            browsers: '> 0.1%'
+            browsers: [
+                'ie >= 8',
+                'ie_mob >= 10',
+                'ff >= 26',
+                'chrome >= 30',
+                'safari >= 6',
+                'opera >= 23',
+                'ios >= 5',
+                'android >= 2.3',
+                'bb >= 10'
+            ]
         }))
         .pipe(cssmin()) //压缩css
         .pipe(rename(function (path) {
@@ -21,8 +31,6 @@ gulp.task('less', function () {
 });
 
 /**
- * 当less文件发生改变时，重新编译less，命令：gulp lessWatch
+ * 当less文件发生改变时，重新编译less
  */
-gulp.task('lessWatch', function () {
-    gulp.watch('src/*.less', ['less']);
-});
+gulp.watch('src/*.less', ['default']);
