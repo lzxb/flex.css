@@ -24,9 +24,7 @@ gulp.task('default', function () {
             ]
         }))
         .pipe(cssmin()) //压缩css
-        .pipe(rename(function (path) {
-            path.extname = '.min.css'; //文件名.min.css
-        }))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist')); //编译后输出目录
 });
 
