@@ -1,6 +1,6 @@
-flex.css
+flex-css-layout
 ====
-### 为什么需要flex.css?
+### 为什么需要flex-css-layout?
 ```
 在移动端开发中，并不是所有的浏览器，webview，微信等各种版本都支持标准的flex，
 但是基本上都会支持-webkit-box，所以flex.css的主要作用是保证每一个属性都能支持标准flex或旧版本的-webkit-box。
@@ -34,7 +34,7 @@ flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版
 ### 使用
 ```html
 <!--
-  将dist目录下的flex-css-layout.min.css或data-flex-css-layout.min.css引入到你的页面中
+  将dist目录下的css文件引入到你的页面中，根据你的需要引入
   flex-css-layout.min.css 使用flex属性匹配
   data-flex-css-layout.min.css 使用data-flex属性匹配（React使用）
  -->
