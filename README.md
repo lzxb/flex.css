@@ -34,9 +34,9 @@ flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版
 ### 使用
 ```html
 <!--
-  将dist目录下的flex.min.css或data-flex.min.css引入到你的页面中
-  flex.min.css 使用flex属性匹配
-  data-flex.min.css 使用data-flex属性匹配（React使用）
+  将dist目录下的flex-css-layout.min.css或data-flex-css-layout.min.css引入到你的页面中
+  flex-css-layout.min.css 使用flex属性匹配
+  data-flex-css-layout.min.css 使用data-flex属性匹配（React使用）
  -->
 <!-- flex属性匹配，简单的子元素居中例子： -->
   <div flex="main:center cross:center" style="width:500px; height: 500px; background: #108423">
