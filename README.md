@@ -1,5 +1,9 @@
 flex-css-layout
 ====
+### 安装
+```
+npm install flex-css-layout
+```
 ### 为什么需要flex-css-layout?
 ```
 在移动端开发中，并不是所有的浏览器，webview，微信等各种版本都支持标准的flex，
