@@ -45,7 +45,7 @@ flex-css-layout同时能兼容新版本和旧版本，保证了浏览器不支�
   将dist目录下的css文件引入到你的页面中，根据你的需要引入
   flex-css-layout.min.css 使用flex属性匹配
   data-flex-css-layout.min.css 使用data-flex属性匹配（React使用）
-  如果使用了webpack打包，可以直接使用引入：import 'flex-css-layout';
+  如果使用了webpack打包，npm安装后，并且配置了ES6编译器的话，可以直接使用引入：import 'flex-css-layout'，能够同时使用flex和data-flex属性匹配;
  -->
 <!-- flex属性匹配，简单的子元素居中例子： -->
   <div flex="main:center cross:center" style="width:500px; height: 500px; background: #108423">
