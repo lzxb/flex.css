@@ -31,7 +31,10 @@ IOS
   6.1 开始支持旧版本 display:-webkit-box;
   7.1 开始支持标准版本 display: flex;
 
-flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版本时，回退到旧版本。
+PC
+  如果你不需要兼容ie10以下版本，也是可以使用flex-css-layout
+  
+flex-css-layout同时能兼容新版本和旧版本，保证了浏览器不支持新版本时，回退到旧版本。
 ```  
 ![Alt text](shot/caniuse.png)
 
