@@ -2,7 +2,7 @@ flex-css-layout
 ====
 ### 安装
 ```
-npm install flex-css-layout
+npm install flex-css-layout --save
 ```
 ### 为什么需要flex-css-layout?
 ```
