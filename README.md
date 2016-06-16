@@ -23,6 +23,7 @@ npm install flex-css-layout
 ### 支持情况
 ```
 flex布局分为旧版本dispaly: box;，过渡版本dispaly: flexbox;，以及现在的标准版本display: flex;
+
 Android 
   2.3 开始就支持旧版本 display:-webkit-box;
   4.4 开始支持标准版本 display: flex;
