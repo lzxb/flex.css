@@ -2,13 +2,12 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var autoprefixer = require('gulp-autoprefixer');
 var cssmin = require('gulp-minify-css');
-var rename = require('gulp-rename');
 
 /**
  * 定义less编译任务
  */
 gulp.task('default', function () {
-    gulp.src(['src/flex-css-layout.less', 'src/data-flex-css-layout.less']) //需要编译的less文件
+    gulp.src(['src/flex.less', 'src/data-flex.less']) //需要编译的less文件
         .pipe(less())
         .pipe(autoprefixer({ //添加浏览器兼容的前缀
             browsers: [
@@ -24,7 +23,6 @@ gulp.task('default', function () {
             ]
         }))
         .pipe(cssmin()) //压缩css
-        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist')); //编译后输出目录
 });
 

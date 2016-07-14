@@ -1,5 +1,5 @@
 // out: null
-/*! flex-css-layout v1.2.8 | 狼族小狈 https://github.com/1340641314/flex-css-layout */
+/*! flex.css v1.2.8 | 狼族小狈 https://github.com/1340641314/flex.css */
 /*
     定义flex布局
 */
@@ -50,7 +50,7 @@
     [@{flex}~="dir:bottom"] {
         flex-direction: column-reverse;
     }
-    
+
     /*
         主轴对齐方式：从左到右(默认)
     */
@@ -128,7 +128,7 @@
     [@{flex}~="cross:stretch"] {
         align-items: stretch;
     }
-    
+
     /*
         子元素平分宽度
     */
@@ -143,12 +143,12 @@
         flex-grow: 1;
         flex-shrink: 1;
     }
-    
+
     [@{flex}~="box:first"]>*:first-child, //第一个子元素
     [@{flex}~="box:last"]>*:last-child, //最后一个子元素
     [@{flex}~="box:justify"]>*:first-child, //两端第一个子元素
     [@{flex}~="box:justify"]>*:last-child //两端最后一个子元素
-    { 
+    {
         width: auto;
         flex-grow: 0;
         flex-shrink: 0;
@@ -184,7 +184,7 @@
         flex-shrink: 0;
     }
 
-    //子元素伸缩比例循环 
+    //子元素伸缩比例循环
     .flex-box(10);
     .flex-box(@n, @i: 0) when (@i =< @n) {
         [@{flex-box}="@{i}"] {

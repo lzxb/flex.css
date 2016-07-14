@@ -1,10 +1,10 @@
-flex-css-layout
+flex.css
 ====
 ### 安装
 ```
-npm install flex-css-layout --save
+npm install flex.css --save
 ```
-### 为什么需要flex-css-layout?
+### 为什么需要flex.css?
 ```
 在移动端开发中，并不是所有的浏览器，webview，微信等各种版本都支持标准的flex，
 但是基本上都会支持-webkit-box，所以flex.css的主要作用是保证每一个属性都能支持标准flex或旧版本的-webkit-box。
@@ -24,37 +24,37 @@ npm install flex-css-layout --save
 ```
 flex布局分为旧版本dispaly: box;，过渡版本dispaly: flexbox;，以及现在的标准版本display: flex;
 
-Android 
+Android
   2.3 开始就支持旧版本 display:-webkit-box;
   4.4 开始支持标准版本 display: flex;
-  
-IOS 
+
+IOS
   6.1 开始支持旧版本 display:-webkit-box;
   7.1 开始支持标准版本 display: flex;
 
 PC
-  如果你不需要兼容ie10以下版本，也是可以使用flex-css-layout
-  
-flex-css-layout同时能兼容新版本和旧版本，保证了浏览器不支持新版本时，回退到旧版本。
-```  
+  如果你不需要兼容ie10以下版本，也是可以使用flex.css
+
+flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版本时，回退到旧版本。
+```
 ![Alt text](shot/caniuse.png)
 
 ### 使用
 ```html
 <!--
   将dist目录下的css文件引入到你的页面中，根据你的需要引入
-  flex-css-layout.min.css 使用flex属性匹配
-  data-flex-css-layout.min.css 使用data-flex属性匹配（React使用）
+  flex.css 使用flex属性匹配
+  data-flex.css 使用data-flex属性匹配（React使用）
   如果使用了webpack打包，npm安装后，并且配置了ES6编译器的话，
   可以直接使用：
-    import 'flex-css-layout';
+    import 'flex.css';
   能够同时使用flex和data-flex属性匹配;
  -->
 <!-- flex属性匹配，简单的子元素居中例子： -->
   <div flex="main:center cross:center" style="width:500px; height: 500px; background: #108423">
     <div style="background: #fff">看看我是不是居中的</div>
   </div>
-  
+
 <!-- data-flex属性匹配，简单的子元素居中例子： -->
   <div data-flex="main:center cross:center" style="width:500px; height: 500px; background: #f1d722">
     <div style="background: #fff">看看我是不是居中的</div>
@@ -93,7 +93,7 @@ box：子元素设置
 
 ### flex-box属性说明
 ```
-取值范围(0-10)，单独设置子元素多余空间的如何分配，设置为0，则子元素不占用多余的多余空间 
+取值范围(0-10)，单独设置子元素多余空间的如何分配，设置为0，则子元素不占用多余的多余空间
 多余空间分配 = 当前flex-box值/子元素的flex-box值相加之和
 ```
 ### 其他
