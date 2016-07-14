@@ -1,6 +1,3 @@
-flex.css
-
-
 ### 安装
 ```
 npm install flex.css --save
