@@ -1,9 +1,9 @@
-flex.css
-====
 ### 安装
 ```
 npm install flex.css --save
 ```
+
+
 ### 为什么需要flex.css?
 ```
 在移动端开发中，并不是所有的浏览器，webview，微信等各种版本都支持标准的flex，
@@ -12,6 +12,8 @@ npm install flex.css --save
 回滚到旧版本的-webkit-box，保证移动设备中能呈现出一样的布局效果。
 于是，一款移动端快速布局的神器诞生了...
 ```
+
+
 ### 优点
 ```
 简洁的api，熟悉的属性值，入门毫无压力。
