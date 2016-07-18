@@ -49,7 +49,8 @@ flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版
   data-flex.css 使用data-flex属性匹配（React使用）
   如果使用了webpack打包，npm安装后，并且配置了ES6编译器的话，
   可以直接使用：
-    import 'flex.css';
+    import 'flex.css/dist/flex.css';
+    import 'flex.css/dist/data-flex.css';
   能够同时使用flex和data-flex属性匹配;
  -->
 <!-- flex属性匹配，简单的子元素居中例子： -->
