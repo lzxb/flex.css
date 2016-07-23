@@ -1,8 +1,8 @@
 {
   "name": "flex.css",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
-  "main": "main.js",
+  "main": "dist/flex.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
