@@ -1,7 +1,8 @@
 {
   "name": "flex.css",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.4",
+  "keywords": ["flex ", "css", "flexible", "react-flex", "vue-flex", "angular-flex", "css-flex", "flex-css"],
+  "description": "移动端flex布局神器，兼容微信，UC，webview等移动端主流浏览器",
   "main": "dist/flex.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/1340641314/flex.css.git"
   },
-  "author": "",
+  "author": "狼族小狈",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/1340641314/flex.css/issues"
