@@ -42,7 +42,7 @@ PC
 
 flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版本时，回退到旧版本。
 ```
-![Alt text](shot/caniuse.png)
+![Alt text](https://github.com/1340641314/flex.css/raw/master/shot/caniuse.png)
 
 ### 使用
 ```html
@@ -109,4 +109,4 @@ NodeJS前端分享群：133240225
 ```
 
 ### demo.html测试截图
-![效果截图](shot/doc.png)
+![效果截图](https://github.com/1340641314/flex.css/raw/master/shot/doc.png)
