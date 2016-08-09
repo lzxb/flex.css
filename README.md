@@ -109,4 +109,4 @@ NodeJS前端分享群：133240225
 ```
 
 ### demo.html测试截图
-![Alt text](shot/doc.png)
+![效果截图](shot/doc.png)
