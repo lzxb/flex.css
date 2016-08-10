@@ -1,7 +1,13 @@
  
  [![npm](https://img.shields.io/npm/v/flex.css.svg?style=flat-square)](https://www.npmjs.com/package/flex.css) [![npm](https://img.shields.io/npm/dt/flex.css.svg?style=flat-square)](https://www.npmjs.com/package/flex.css) [![npm](https://img.shields.io/npm/l/flex.css.svg?style=flat-square)](https://www.npmjs.com/package/flex.css)
 
-### 安装
+
+### download
+```
+git clone https://github.com/1340641314/react-cnode.git
+```
+
+### npm
 ```
 npm install flex.css --save
 ```
@@ -17,7 +23,7 @@ npm install flex.css --save
 ```
 
 
-### 优点
+###  merits
 ```
 简洁的api，熟悉的属性值，入门毫无压力。
 在html中采用属性的方式布，将布局和css进行分离，清晰的布局结构让你更容易维护，可以在不更改css的情况下更改布局。
@@ -25,7 +31,7 @@ npm install flex.css --save
 ```
 
 
-### 支持情况
+### support
 ```
 flex布局分为旧版本dispaly: box;，过渡版本dispaly: flexbox;，以及现在的标准版本display: flex;
 
@@ -44,7 +50,7 @@ flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版
 ```
 ![Alt text](https://github.com/1340641314/flex.css/raw/master/shot/caniuse.png)
 
-### 使用
+### use
 ```html
 <!--
   将dist目录下的css文件引入到你的页面中，根据你的需要引入
@@ -102,7 +108,7 @@ box：子元素设置
 取值范围(0-10)，单独设置子元素多余空间的如何分配，设置为0，则子元素不占用多余的多余空间
 多余空间分配 = 当前flex-box值/子元素的flex-box值相加之和
 ```
-### 其他
+### adviertisement
 ```
 深圳html5开发者社群：170761660
 NodeJS前端分享群：133240225
