@@ -4,7 +4,7 @@
 
 ### download
 ```
-git clone https://github.com/1340641314/react-cnode.git
+git clone https://github.com/1340641314/flex.css.git
 ```
 
 ### npm
