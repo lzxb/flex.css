@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0">
+    <title>flex.css 移动端flex布局神器</title>
+    <link href="../dist/flex.min.css" rel="stylesheet">
+    <link href="./demo.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="about">flex.css，轻量级移动端布局神器，让你用最快的速度，并且用最优雅的方式完成复杂的移动端布局，让你专注于编写内容呈现效果，完美兼容Android，ios，微信端。
+        <br> <b style="color:#49ff00;">深圳html5开发者社群：170761660</b>
+        <br> <b style="color:#49ff00;">NodeJS前端分享群：133240225</b>
+        <br> <b style="color:#49ff00;">github：https://github.com/1340641314/flex</b>
+    </div>
+    <div class="item">
+        <div class="tit">快速入门</div>
+        <div class="content">flex只有两个属性，一个是容器属性flex，一个是子元素属性flex-box
+            <br> 如：
+            <textarea>
+                <div flex="dir:left main:left cross:top">
+                    <div flex-box="0"></div>
+                </div>
+            </textarea>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">flex属性大全</div>
+        <ul class="attr">
+            <li>
+                <h3>dir：主轴方向</h3>
+                <ul class="query">
+                    <li>top：从上到下</li>
+                    <li>right：从右到左</li>
+                    <li>bottom：从上到下</li>
+                    <li>left：从左到右（默认）</li>
+                </ul>
+            </li>
+            <li>
+                <h3>main：主轴对齐方式</h3>
+                <ul class="query">
+                    <li>right：从右到左</li>
+                    <li>left：从左到右（默认）</li>
+                    <li>justify：两端对齐</li>
+                    <li>center：居中对齐</li>
+                </ul>
+            </li>
+            <li>
+                <h3>cross：交叉轴对齐方式</h3>
+                <ul class="query">
+                    <li>top：从上到下</li>
+                    <li>bottom：从上到下</li>
+                    <li>baseline：跟随内容高度对齐</li>
+                    <li>center：居中对齐</li>
+                    <li>stretch：高度并排铺满（默认）</li>
+                </ul>
+            </li>
+            <li>
+                <h3>box：子元素设置</h3>
+                <ul class="query">
+                    <li>mean：子元素平分空间</li>
+                    <li>first：第一个子元素不要多余空间，其他子元素平分多余空间</li>
+                    <li>last：最后一个子元素不要多余空间，其他子元素平分多余空间</li>
+                    <li>justify：两端第一个元素不要多余空间，其他子元素平分多余空间</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="item">
+        <div class="tit">flex-box属性说明</div>
+        <div class="content">
+            取值范围(0-10)，单独设置子元素多余空间的如何分配，设置为0，则子元素不占用多余的多余空间
+            <br>多余空间分配 = 当前box值/子元素的box值相加之和
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="tit">主轴方向：<span data-set="dir:top">从上到下</span><span data-set="dir:right">从右到左</span><span data-set="dir:bottom">从下到上</span>
+            <span
+                class="on" data-set="dir:left">从左到右</span>
+        </div>
+        <div class="content">
+            <div class="demo" flex="dir:left">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">主轴对齐方式：<span data-set="main:right">从右到左</span><span class="on" data-set="main:left">从左到右</span><span data-set="main:justify">两端对齐</span>
+            <span
+                data-set="main:center">居中对齐</span>
+        </div>
+        <div class="content">
+            <div class="demo" flex="main:left">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">交叉轴对齐方式：<span data-set="cross:top">从上到下</span><span data-set="cross:bottom">从下到上</span><span data-set="cross:baseline">跟随内容高度对齐</span>
+            <span
+                data-set="cross:center">居中对齐</span><span class="on" data-set="cross:stretch">高度并排铺满</span></div>
+        <div class="content">
+            <div class="demo" flex="cross:stretch">
+                <div>1
+                    <br>1*2</div>
+                <div>2
+                    <br>2*2
+                    <br>2*3</div>
+                <div>3
+                    <br>3*2
+                    <br>3*3
+                    <br>3*4</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">子元素宽度设置：<span class="on" data-set="dir:left box:mean">平分</span><span data-set="dir:left box:first">第一个固定</span>
+            <span
+                data-set="dir:left box:last">最后一个固定</span><span data-set="dir:left box:justify">两端第一个固定</span></div>
+        <div class="content">
+            <div class="demo" flex="box:mean">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">子元素高度设置：<span class="on" data-set="dir:top box:mean">平分</span><span data-set="dir:top box:first">第一个固定</span>
+            <span
+                data-set="dir:top box:last">最后一个固定</span><span data-set="dir:top box:justify">两端第一个固定</span></div>
+        <div class="content">
+            <div class="demo" flex="box:mean">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">左边固定宽度，右边把多余宽度占满</div>
+        <div class="content">
+            <div class="demo" flex>
+                <div flex-box="0">1</div>
+                <div flex-box="1">2</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">右边固定宽度，左边把多余宽度占满</div>
+        <div class="content">
+            <div class="demo" flex="dir:right box:first">
+                <div>1</div>
+                <div>2</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">上边固定宽度，下边把多余宽度占满</div>
+        <div class="content">
+            <div class="demo" flex="dir:top">
+                <div flex-box="0">1</div>
+                <div flex-box="1">2</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">下边固定宽度，上边把多余宽度占满</div>
+        <div class="content">
+            <div class="demo" flex="dir:top">
+                <div flex-box="1">1</div>
+                <div flex-box="0">2</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">左右两边对齐</div>
+        <div class="content">
+            <div class="demo" flex="main:justify">
+                <div>1</div>
+                <div>2</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">上下两边对齐</div>
+        <div class="content">
+            <div class="demo" flex="dir:top main:justify">
+                <div>1</div>
+                <div>2</div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="tit">垂直居中</div>
+        <div class="content">
+            <div class="demo" flex="main:center cross:center">
+                <div>1</div>
+            </div>
+        </div>
+    </div>
+    <script src="./demo.js"></script>
+</body>
+
+</html>

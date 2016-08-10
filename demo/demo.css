@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    max-width: 940px;
+    margin: 0 auto;
+    font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    background: #222;
+}
+
+.about {
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    background: #1D1F21;
+}
+
+.item {
+    margin: 10px 10px 30px 10px;
+    background: #333;
+}
+
+.item .tit {
+    overflow: hidden;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #24a990;
+}
+
+.item .tit span {
+    display: inline-block;
+    padding: 3px 10px;
+    margin: 0 5px;
+    font-size: 12px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #298675;
+    cursor: pointer;
+}
+
+.item .tit span.on {
+    background: #0e5044;
+}
+
+.item .content {
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.item .attr {
+    border: 1px solid #24a990;
+}
+
+.item .attr li {
+    padding-left: 10px;
+    border-top: 1px solid #24a990;
+    line-height: 38px;
+}
+
+.item .attr li h3 {
+    font-weight: normal;
+    font-size: 16px;
+    color: #A84C60;
+}
+
+.item .query {
+    margin-left: 60px;
+    color: #D8932B;
+}
+
+.item .query li {
+    line-height: 28px;
+    border-top: none;
+}
+
+textarea {
+    overflow-y: scroll;
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    resize: none;
+    border: none;
+    color: #fff;
+    background: #222;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.demo {
+    width: 250px;
+    height: 250px;
+    background: #108423;
+}
+
+.demo div {
+    min-width: 40px;
+    min-height: 40px;
+    background: #f1d722;
+    text-align: center;
+    line-height: 50px;
+    color: #222;
+}
+
+.demo div+div {
+    line-height: 23px;
+    background: #f95656;
+}
+
+.demo div+div+div {
+    line-height: 30px;
+    background: #5fc383;
+}
