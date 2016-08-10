@@ -108,5 +108,5 @@ box：子元素设置
 NodeJS前端分享群：133240225
 ```
 
-### demo.html测试截图
-![效果截图](https://github.com/1340641314/flex.css/raw/master/shot/doc.png)
+### demo
+ [![demo](https://github.com/1340641314/flex.css/raw/master/shot/QR-code.png)](http://1340641314.github.io/flex.css/)
