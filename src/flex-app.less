@@ -30,6 +30,7 @@
 
     [@{flex}~="dir:right"]{
         flex-direction: row-reverse;
+        -webkit-box-pack: end; //修复旧版本主轴和标准flex表现不一致的bug
     }
 
 
@@ -48,6 +49,7 @@
 
     [@{flex}~="dir:bottom"] {
         flex-direction: column-reverse;
+        -webkit-box-pack: end; //修复旧版本主轴和标准flex表现不一致的bug
     }
 
     /*
