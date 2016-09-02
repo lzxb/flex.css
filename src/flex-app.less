@@ -30,6 +30,7 @@
 
     [@{flex}~="dir:right"]{
         flex-direction: row-reverse;
+        float : right; //兼容uc浏览器未从元素右边开始排的bug
     }
 
 
@@ -48,6 +49,7 @@
 
     [@{flex}~="dir:bottom"] {
         flex-direction: column-reverse;
+        float : right; //兼容uc浏览器未从元素下边开始排的bug
     }
 
     /*
