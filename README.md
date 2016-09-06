@@ -4,7 +4,7 @@
 
 ### download
 ```
-git clone https://github.com/1340641314/flex.css.git
+git clone https://github.com/lzxb/flex.css.git
 ```
 
 ### npm
@@ -48,7 +48,7 @@ PC
 
 flex.css同时能兼容新版本和旧版本，保证了浏览器不支持新版本时，回退到旧版本。
 ```
-![Alt text](https://github.com/1340641314/flex.css/raw/master/shot/caniuse.png)
+![Alt text](https://github.com/lzxb/flex.css/raw/master/shot/caniuse.png)
 
 ### use
 ```html
@@ -115,4 +115,4 @@ NodeJS前端分享群：133240225
 ```
 
 ### demo
- [![demo](https://github.com/1340641314/flex.css/raw/master/shot/QR-code.png)](http://1340641314.github.io/flex.css/)
+ [![demo](https://github.com/lzxb/flex.css/raw/master/shot/QR-code.png)](http://lzxb.github.io/flex.css/)
