@@ -1,6 +1,6 @@
 {
   "name": "flex.css",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "keywords": ["flex ", "css", "flexible", "react-flex", "vue-flex", "angular-flex", "css-flex", "flex-css"],
   "description": "移动端flex布局神器，兼容微信，UC，webview等移动端主流浏览器",
   "main": "dist/flex.css",
