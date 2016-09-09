@@ -22,7 +22,7 @@ npm install flex.css --save
 ```
 
 
-###  merits 用最少的代码实现flex布局
+###  merits
 ```
 简洁的api，熟悉的属性值，入门毫无压力。
 在html中采用属性的方式布，将布局和css进行分离，清晰的布局结构让你更容易维护，可以在不更改css的情况下更改布局。
