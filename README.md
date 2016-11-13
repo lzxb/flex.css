@@ -1,7 +1,7 @@
   [![npm](https://img.shields.io/npm/v/flex.css.svg?style=flat-square)](https://www.npmjs.com/package/flex.css) [![npm](https://img.shields.io/npm/dt/flex.css.svg?style=flat-square)](https://www.npmjs.com/package/flex.css) [![npm](https://img.shields.io/npm/l/flex.css.svg?style=flat-square)](https://www.npmjs.com/package/flex.css)
 
 ###
-[https://github.com/lzxb/flex.css/raw/master/docs/zh-cn.md](中文文档入口)
+[中文文档入口](https://github.com/lzxb/flex.css/raw/master/docs/zh-cn.md)
 
 ### download
 ```
