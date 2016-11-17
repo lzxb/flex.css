@@ -88,11 +88,11 @@ main：主轴对齐方式
 ```
 ```
 cross：交叉轴对齐方式
-    top：从上到下
+    top：从上到下（默认）
     bottom：从上到下
-    baseline：跟随内容高度对齐
+    baseline：基线对齐
     center：居中对齐
-    stretch：高度并排铺满（默认）
+    stretch：高度并排铺满
 ```
 ```
 box：子元素设置
