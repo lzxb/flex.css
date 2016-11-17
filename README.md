@@ -90,11 +90,11 @@ main：axis align
 ```
 ```
 cross：cross axis align
-    top：from top to bottom
+    top：from top to bottom ( default )
     bottom：from top to bottom
-    baseline：aligned with the height of content
+    baseline：baseline align
     center：center align
-    stretch：cover whole area ( default )
+    stretch：cover whole area 
 ```
 ```
 box：child element setup 
