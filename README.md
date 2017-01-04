@@ -78,8 +78,8 @@ import 'flex.css/dist/data-flex.css';
 dir: axis direction
     top：from top to bottom
     right：from right to left
-    bottom：from top to bottom
-    left：from left to right( default )
+    bottom：from bottom to top
+    left：from left to right( default )
 ```
 ```
 main：axis align
