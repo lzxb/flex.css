@@ -4,14 +4,11 @@
 */
 .flex-app (@flex, @flex-box){
     [@{flex}] {
-    overflow: hidden;
     display: flex;
         &>* {
             display: block;
-            overflow: hidden;
         }
         &>[@{flex}]{
-            overflow: hidden;
             display: flex;
         }
     }

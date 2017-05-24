@@ -1,11 +1,12 @@
 {
   "name": "flex.css",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "keywords": ["flex ", "css", "flexible", "react-flex", "vue-flex", "angular-flex", "css-flex", "flex-css"],
   "description": "移动端flex布局神器，兼容微信，UC，webview等移动端主流浏览器",
   "main": "dist/flex.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "node_modules/.bin/gulp",
+    "dev": "npm run gulp"
   },
   "repository": {
     "type": "git",
