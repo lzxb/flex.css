@@ -2,6 +2,7 @@
 
 ###
 [中文文档入口](https://github.com/lzxb/flex.css/blob/master/docs/zh-ch.md)
+如果对状态管理感兴趣，可以看下 [Tms](https://github.com/FollowmeTech/tms)，文档更齐全
 
 ### download
 ```
