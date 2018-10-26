@@ -1,7 +1,7 @@
   [![npm](https://img.shields.io/npm/v/flex.css.svg?style=flat-square)](https://www.npmjs.com/package/flex.css) [![npm](https://img.shields.io/npm/dt/flex.css.svg?style=flat-square)](https://www.npmjs.com/package/flex.css) [![npm](https://img.shields.io/npm/l/flex.css.svg?style=flat-square)](https://www.npmjs.com/package/flex.css)
 
 ###
-[中文文档入口](https://github.com/lzxb/flex.css/blob/master/docs/zh-ch.md)
+[中文文档入口](https://github.com/lzxb/flex.css/blob/master/docs/zh-ch.md)  
 如果对状态管理感兴趣，可以看下 [Tms](https://github.com/FollowmeTech/tms)，文档更齐全
 
 ### download
