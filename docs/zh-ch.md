@@ -32,7 +32,7 @@ npm install flex.css --save
 
 ### support
 ```
-flex布局分为旧版本dispaly: box;，过渡版本dispaly: flexbox;，以及现在的标准版本display: flex;
+flex布局分为旧版本display: box;，过渡版本dispaly: flexbox;，以及现在的标准版本display: flex;
 
 Android
   2.3 开始就支持旧版本 display:-webkit-box;
