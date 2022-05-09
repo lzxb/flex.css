@@ -115,3 +115,5 @@ NodeJS前端分享群：133240225
 
 ### demo
  [![demo](https://github.com/lzxb/flex.css/raw/master/shot/QR-code.png)](http://lzxb.github.io/flex.css/)
+### other demo
+ [![demo](https://github.com/lzxb/flex.css/raw/master/shot/QR-code1.png)](https://flexcss.kiduc.com/)
