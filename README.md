@@ -115,3 +115,5 @@ spare space assignment = current value of flex-box / the sum of all values of ch
 
 ### demo
  [![demo](https://github.com/lzxb/flex.css/raw/master/shot/QR-code.png)](http://lzxb.github.io/flex.css/)
+### other demo
+ [![demo](https://github.com/lzxb/flex.css/raw/master/shot/QR-code1.png)](https://flexcss.kiduc.com/)
