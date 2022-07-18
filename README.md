@@ -4,7 +4,7 @@
 [中文文档入口](https://github.com/lzxb/flex.css/blob/master/docs/zh-ch.md)  
 如果对状态管理感兴趣，可以看下 [Tms](https://github.com/FollowmeTech/tms)，文档更齐全
 
-### download
+### Download
 ```
 git clone https://github.com/lzxb/flex.css.git
 ```
@@ -26,7 +26,7 @@ Then,here comes a magic effient layout tool of mobile terminal development ...
 ```
 
 
-###  merits
+###  Merits
 ```
 Concise api, 
 familiar attribute values, makes it easy for you to get started in using flex.css.
@@ -52,7 +52,7 @@ flex.css is compatible with standard version and old version at the same time, s
 ```
 ![Alt text](https://github.com/lzxb/flex.css/raw/master/shot/caniuse.png)
 
-### use
+### Use
 ```html
 <!--
 According to what you need, include css files in the dist directory into your html
@@ -74,7 +74,7 @@ import 'flex.css/dist/data-flex.css';
     <div style="background: #fff"> to see if this is in the center </div>
   </div>
 ```
-### collection of flex attributes
+### Collection of flex attributes
 ```
 dir: axis direction
     top：from top to bottom
@@ -106,14 +106,14 @@ box：child element setup
 	and split by the rest of child elements equally
 ```
 
-### flex-box attributes description
+### Flex-box attributes description
 ```
 values range ( 0-10 ), how to asign spare space to individual child element: if the value equals 0,there won't 
 be any spare space for this child element.
 spare space assignment = current value of flex-box / the sum of all values of child element's flex-box 
 ```
 
-### demo
+### Demo
  [![demo](https://github.com/lzxb/flex.css/raw/master/shot/QR-code.png)](http://lzxb.github.io/flex.css/)
-### other demo
+### Other demo
  [![demo](https://github.com/lzxb/flex.css/raw/master/shot/QR-code1.png)](https://flexcss.kiduc.com/)
