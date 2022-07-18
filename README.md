@@ -35,7 +35,7 @@ to maintain and modify your layout without modifying css.
 ```
 
 
-### support
+### Support
 ```
 flex layout is split into three versions: old version: display: box; , transitional version: display:flexbox; ,
 and present standard version: display:flex; .
